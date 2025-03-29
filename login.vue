@@ -1,10 +1,41 @@
+<template>
+<div class="login-bg">
+    <div class="container">
+        <div class="login-container">
+            <div class="login-form">
+            <form @submit.prevent="login">
+                <div class="login-form-items">
+                    <span class="login-label">LOG IN</span>
+                    <div class="text-input-container">
+                    <label class="form-label">USERNAME</label>
+                        <input type="text" name="username" class="text-style" required>
+                    <label class="form-label">PASSWORD</label>
+                        <input type="password" name="password" class="text-style" required>
+                    </div>
+                    <router-link to="/home" class="login-btn">SIGN IN</router-link>
+                    <router-link to="/register" class="login-btn">SIGN UP</router-link>
+                </div>
+            </form>    
+            </div>
+            
+    <div class="login-deco-container">
+    <div class="login-deco">
+    <span class="penny">MONEY <br> LOG</span>
+        <img src="/LOGO.png" alt="Logo Image" class="deco-image">  
+    </div>
+    </div>
+    </div>
+    </div>
+</div>
+</template>
+
+<script setup>
+</script>
+
+<style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
 body {
-    background-image: url("/circle.png");
-    background-size: cover; /* Makes sure it covers the whole screen */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents tiling */
     margin: 0;
     padding: 0;
     width: 100vw;
@@ -13,6 +44,13 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Lato', sans-serif;
+}
+
+.login-bg {
+    background-image: url("/circle.png");
+    background-size: cover; /* Makes sure it covers the whole screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
 }
 
 .container {
@@ -68,7 +106,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin-left: 15px;
-    margin-top: 23px;
+    margin-top: 35px;
 }
 
 span.login-label {
@@ -124,28 +162,7 @@ input.text-style {
     color: black;
 }
 
-button.login-btn {
-    width: 200px;
-    background: #D6EFD8;
-    border-radius: 20px;
-    border: none;
-    padding: 15px 0;
-    color: black;
-    font-weight: 790;
-    font-size: 15px;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    box-shadow: 0 8px 10px 0 rgba(0,0,0,0.25);
-    margin-top: 25px;
-    margin-left: 20px;
-}
-
-button.login-btn:hover{
-    background-color: #80AF81;
-}
-
-.login-btn1 {
+.login-btn {
     width: 200px;
     background: #D6EFD8;
     border-radius: 20px;
@@ -163,7 +180,7 @@ button.login-btn:hover{
     text-decoration: none;
 }
 
-.login-btn1:hover{
+.login-btn:hover{
     background-color: #80AF81;
 }
 
@@ -174,7 +191,7 @@ button.login-btn:hover{
    left: 50%;
    bottom: 15px;
    transform: translateX(-50%);
-   color: black;
+   color: #f6f8d5;
    font-weight: bold;
    font-size: 55px; 
    letter-spacing: 2px;
@@ -197,9 +214,10 @@ input:focus {
 }
 
 .deco-image {
-    width: 300px;
+    width: 380px;
     height: auto;
-    margin-top: 50px; 
+    margin-top: 110px; 
+    margin-left: 30px; 
     display: block;
 }
 
@@ -280,3 +298,6 @@ input:focus {
     }
 
 }
+</style>
+
+
