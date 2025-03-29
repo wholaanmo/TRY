@@ -1,10 +1,45 @@
+<template>
+<div class="register-bg">
+    <div class="container">
+        <div class="login-container">
+            <div class="login-form">
+            <form @submit.prevent="registerUser">
+                <div class="login-form-items">
+                    <span class="login-label">REGISTER</span>
+                    <div class="text-input-container">
+                    <label class="form-label">USERNAME</label>
+                            <input type="text" name="username" class="text-style" required>
+                    <label class="form-label">EMAIL</label>
+                            <input type="email" name="email" class="text-style" required>
+                    <label class="form-label">PASSWORD</label>
+                            <input type="password" name="password" class="text-style" required>
+                    <label class="form-label">AGE</label>
+                            <input type="number" name="age" class="text-style" required>
+
+                    </div>
+                    <button class="login-btn">SIGN UP</button>
+                    <router-link to="/login" class="login-btn1">SIGN IN</router-link>
+                </div>
+            </form>    
+        </div>
+    <div class="login-deco-container">
+    <div class="login-deco">
+    <span class="penny">MONEY <br> LOG</span>
+        <img src="/LOGO.png" alt="Logo Image" class="deco-image">  
+    </div>
+    </div>
+    </div>
+    </div>
+</div>
+</template>
+
+<script>
+</script>
+
+<style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
 body {
-    background-image: url("/circle.png");
-    background-size: cover; /* Makes sure it covers the whole screen */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents tiling */
     margin: 0;
     padding: 0;
     width: 100vw;
@@ -13,6 +48,13 @@ body {
     justify-content: center;
     align-items: center;
     font-family: 'Lato', sans-serif;
+}
+
+.register-bg {
+    background-image: url("/circle.png");
+    background-size: cover; /* Makes sure it covers the whole screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
 }
 
 .container {
@@ -174,7 +216,7 @@ button.login-btn:hover{
    left: 50%;
    bottom: 15px;
    transform: translateX(-50%);
-   color: black;
+   color: #f6f8d5;
    font-weight: bold;
    font-size: 55px; 
    letter-spacing: 2px;
@@ -197,9 +239,10 @@ input:focus {
 }
 
 .deco-image {
-    width: 300px;
+    width: 380px;
     height: auto;
-    margin-top: 50px; 
+    margin-top: 110px; 
+    margin-left: 30px;
     display: block;
 }
 
@@ -280,3 +323,4 @@ input:focus {
     }
 
 }
+</style>
