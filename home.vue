@@ -10,6 +10,9 @@
     <li><router-link class="link" to="/group">GROUP</router-link></li>
     <li><router-link class="link" to="/view">VIEW</router-link></li>
     <li><router-link class="link" to="/about">ABOUT US</router-link></li>     
+    <div class="profile-trigger" aria-label="Profile">
+            <i class="fas fa-user-circle" style="font-size: 30px; cursor: pointer;"></i>
+    </div>
   </ul>
   <div class="icon">
       <i @click="toggleMobileNav" v-show="mobile" class="far fa-bars" :class="{'icon-active': mobileNav }"></i>
@@ -21,6 +24,9 @@
     <li><router-link class="link" to="/group">GROUP</router-link></li>
     <li><router-link class="link" to="/view">VIEW</router-link></li>
     <li><router-link class="link" to="/about">ABOUT US</router-link></li>   
+    <div class="profile-trigger" aria-label="Profile">
+            <i class="fas fa-user-circle" style="font-size: 30px; cursor: pointer;"></i>
+    </div>
   </ul>
   </transition>
   </nav>
@@ -94,19 +100,19 @@ export default {
 
 <style>
 header {
-  background-color:black;
+  background-color:#2a4935;
   z-index: 99;
   width: 100%;
   position: fixed;
   transition: .5s ease all;
-  color:#ffffff;
+  color:#f6f8d5;
 }
 
 nav {
   position: relative;
   display: flex;
   flex-direction: row;
-  padding: 12px 0;
+  padding: 6px 0;
   transition: .5s ease all;
   width: 90%;
   margin: 0 auto;
@@ -117,7 +123,7 @@ nav {
 ul,
 .link {
   font-weight: 500;
-  color: #ffffff;
+  color: #f6f8d5;
   list-style: none;
   text-decoration: none;
 }
@@ -125,35 +131,36 @@ ul,
 li {
   text-transform: uppercase;
   padding: 16px;
-  margin-left: 16px;
+  margin-left: 30px;
 }
 
 .link {
-  font-size: 14px;
+  font-size: 20px;
   transition: .5s ease all;
   padding-bottom: 4px;
-  border-bottom: 1px solid transparent;
+  border-bottom: 2px solid transparent;
 
   &:hover {
-    color: aquamarine;
-    border-color: aqua;
+    color: black;
+    border-color: black;
   }
 }
 
 .branding {
   display: flex;
-  align-items: center;
+}
 
   p.title {
   color: #f6f8d5;
+  margin-left: -200px;
   font-size: 50px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-}
+
 
 .navigation {
   display: flex;
-  align-items: center;
+  align-items: end;
   flex: 1;
   justify-content: flex-end;
 }
@@ -184,7 +191,7 @@ li {
   width: 100%;
   max-width: 250px;
   height: 100;
-  background-color: #ffffff;
+  background-color: #f6f8d5;
   top: 0;
   left: 0;
 
@@ -249,7 +256,7 @@ body {
 .logo {
   width: 650px; /* Adjust size */
   height: 650px;
-  margin-top: 190px;
+  margin-top: 490px;
   margin-left: 100px;
 }
 
@@ -263,7 +270,7 @@ body {
   color: black; 
   padding-right: 100px;
   margin-right: 100px;
-  margin-top: 130px;
+  margin-top: 430px;
 
 }
 
@@ -305,6 +312,5 @@ body {
   align-items: center;
   z-index: 1000;
 }
-
 
 </style>
