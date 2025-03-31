@@ -5,28 +5,31 @@
       <p class="title">Money Log</p>
     </div>
   <ul v-show="!mobile" class="navigation">
-    <li><router-link class="link" to="/">HOME</router-link></li>
+    <li><router-link class="link" to="/home">HOME</router-link></li>
     <li><router-link class="link" to="/personal">PERSONAL</router-link></li>
     <li><router-link class="link" to="/group">GROUP</router-link></li>
     <li><router-link class="link" to="/view">VIEW</router-link></li>
     <li><router-link class="link" to="/about">ABOUT US</router-link></li>     
-    <div class="profile-trigger" aria-label="Profile">
-            <i class="fas fa-user-circle" style="font-size: 30px; cursor: pointer;"></i>
-    </div>
+    <router-link to="/profile" class="profile-trigger" aria-label="Profile">
+      <i class="fas fa-user-circle" style="font-size: 30px; cursor: pointer;"></i>
+  </router-link>
+
   </ul>
   <div class="icon">
       <i @click="toggleMobileNav" v-show="mobile" class="far fa-bars" :class="{'icon-active': mobileNav }"></i>
   </div>
   <transition name="mobile-nav">
     <ul v-show="mobileNav" class="dropdown-nav">
-    <li><router-link class="link" to="/">HOME</router-link></li>
+    <li><router-link class="link" to="/home">HOME</router-link></li>
     <li><router-link class="link" to="/personal">PERSONAL</router-link></li>
     <li><router-link class="link" to="/group">GROUP</router-link></li>
     <li><router-link class="link" to="/view">VIEW</router-link></li>
     <li><router-link class="link" to="/about">ABOUT US</router-link></li>   
-    <div class="profile-trigger" aria-label="Profile">
-            <i class="fas fa-user-circle" style="font-size: 30px; cursor: pointer;"></i>
-    </div>
+    <router-link to="/profile" class="user" aria-label="Profile">
+      <i class="fas fa-user-circle" style="font-size: 30px; cursor: pointer;"></i>
+    </router-link>
+
+
   </ul>
   </transition>
   </nav>
@@ -97,7 +100,6 @@ export default {
 
 
 
-
 <style>
 header {
   background-color:#2a4935;
@@ -117,16 +119,26 @@ nav {
   width: 90%;
   margin: 0 auto;
   @media(min-width: 1140px) {
-    max-width: 1140px;
+  nav {
+      margin-left: 20px; /* Moves nav slightly to the right only on large screens */
+  }
   }
 
-ul,
+ul, 
 .link {
   font-weight: 500;
   color: #f6f8d5;
   list-style: none;
   text-decoration: none;
 }
+
+.user {
+  font-weight: 500;
+  color: #f6f8d5;
+  list-style: none;
+  text-decoration: none;
+}
+
 
 li {
   text-transform: uppercase;
@@ -152,8 +164,8 @@ li {
 
   p.title {
   color: #f6f8d5;
-  margin-left: -200px;
-  font-size: 50px;
+  margin-left: -10px;
+  font-size: 40px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -189,17 +201,24 @@ li {
   flex-direction: column;
   position: fixed;
   width: 100%;
-  max-width: 250px;
-  height: 100;
-  background-color: #f6f8d5;
+  max-width: 200px;
+  height: 100vh;
+  background-color: #D6EFD8;
   top: 0;
   left: 0;
 
+
   li {
     margin-left: 0;
+  }
     .link {
       color: #000;
-    }
+  }
+
+    .user {
+      color: #000;
+      margin-left: 15px;
+      margin-top: 5px;
   }
 }
 
@@ -250,13 +269,13 @@ body {
   justify-content: space-between;
   height: 60vh;
   padding: 0 50px; /* Adds space on both sides */
-  gap: 50px; 
+  gap: 80px; 
 }
 
 .logo {
-  width: 650px; /* Adjust size */
-  height: 650px;
-  margin-top: 490px;
+  width: 500px; /* Adjust size */
+  height: 500px;
+  margin-top: 470px;
   margin-left: 100px;
 }
 
@@ -269,7 +288,7 @@ body {
   text-align: right;
   color: black; 
   padding-right: 100px;
-  margin-right: 100px;
+  margin-right: 60px;
   margin-top: 430px;
 
 }
@@ -277,7 +296,7 @@ body {
 .content h2 {
   font-size: 3em; 
   margin-bottom: 20px;
-  margin-right: 90px;
+  margin-right: 180px;
   font-weight: bold;
   text-align: center;
 
@@ -295,8 +314,14 @@ body {
   transition: color 0.3s ease, transform 0.3s ease;
   margin-left: 10px;
   cursor: pointer;
-  
+  display: flex;
+  align-items: center;
+  position: relative;
+  right: -20px; /* Move right */
+  bottom: 10px;
+  text-decoration: none; /* Removes underline */
 }
+
 .profile-trigger:hover {
   transform: scale(1.1); 
   
@@ -312,5 +337,3 @@ body {
   align-items: center;
   z-index: 1000;
 }
-
-</style>
