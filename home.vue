@@ -260,8 +260,10 @@ body {
   padding: 0;
   height: 100vh;
   background-color: #f6f8d5;
-  overflow: hidden; 
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  overflow-y: auto; /* Allows vertical scrolling */
 }
+
 
 .profile-trigger {
   font-size: 30px;
@@ -308,9 +310,9 @@ body {
 }
 
 .logo {
-  width: 500px; /* Adjust size */
-  height: 500px;
-  margin-top: 470px;
+  width: 550px; /* Adjust size */
+  height: 550px;
+  margin-top: 460px;
   margin-left: 100px;
 }
 
@@ -330,11 +332,8 @@ body {
 
 .content h2 {
   font-size: 3em; 
-  margin-bottom: 20px;
-  margin-right: 180px;
   font-weight: bold;
   text-align: center;
-
 }
 
 .content p {
@@ -345,7 +344,7 @@ body {
 
 /* RESPONSIVE DESIGN */
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1440px) {
   .container {
     flex-direction: column;
     align-items: center;
@@ -353,8 +352,10 @@ body {
   }
   .logo {
     margin-top: 150px;
-    width: 450px;
-    height: 450px;
+    margin-left: 30px;
+    margin-bottom: -30px;
+    width: 500px;
+    height: 500px;
   }
   .content {
     align-items: center;
@@ -363,26 +364,90 @@ body {
     padding: 0;
   }
   .content h2 {
-    font-size: 2em;
+    font-size: 3em;
     margin: 0;
+    margin-bottom: 30px;
   }
   .content p {
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin: 0;
+    margin-bottom: 60px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .logo {
+    margin-top: 150px;
+    margin-left: 30px;
+    margin-bottom: -30px;
+    width: 500px;
+    height: 500px;
+  }
+  .content {
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .content h2 {
+    font-size: 3em;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  .content p {
+    font-size: 1.5em;
+    margin: 0;
+    margin-bottom: 60px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .logo {
+    margin-top: 150px;
+    margin-left: 30px;
+    margin-bottom: -30px;
+    width: 500px;
+    height: 500px;
+  }
+  .content {
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .content h2 {
+    font-size: 3em;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  .content p {
+    font-size: 1.5em;
+    margin: 0;
+    margin-bottom: 60px;
   }
 }
 
 @media only screen and (max-width: 768px) {
   .logo {
-    margin-top: 100px;
+    margin-top: 150px;
     width: 450px;
     height: 450px;
   }
   .content h2 {
-    font-size: 1.8em;
+    font-size: 2.5em;
   }
   .content p {
-    font-size: 1em;
+    font-size: 1.3em;
   }
 }
 
@@ -396,11 +461,7 @@ body {
     font-size: 1.5em;
   }
   .content p {
-    font-size: 0.8em;
-  }
-
-  .dropdown-nav {
-    overflow-y: scroll;
+    font-size: 1.1em;
   }
 }
 
