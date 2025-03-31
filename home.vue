@@ -313,7 +313,7 @@ body {
   width: 550px; /* Adjust size */
   height: 550px;
   margin-top: 460px;
-  margin-left: 100px;
+  margin-left: 80px;
 }
 
 .content {
@@ -352,7 +352,7 @@ body {
   }
   .logo {
     margin-top: 150px;
-    margin-left: 30px;
+    margin-left: -10px;
     margin-bottom: -30px;
     width: 500px;
     height: 500px;
@@ -383,7 +383,7 @@ body {
   }
   .logo {
     margin-top: 150px;
-    margin-left: 30px;
+    margin-left: -10px;
     margin-bottom: -30px;
     width: 500px;
     height: 500px;
@@ -414,7 +414,7 @@ body {
   }
   .logo {
     margin-top: 150px;
-    margin-left: 30px;
+    margin-left: -10px;
     margin-bottom: -30px;
     width: 500px;
     height: 500px;
