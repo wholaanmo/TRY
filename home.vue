@@ -9,7 +9,7 @@
     <li><router-link class="link" to="/personal">PERSONAL</router-link></li>
     <li><router-link class="link" to="/group">GROUP</router-link></li>
     <li><router-link class="link" to="/view">VIEW</router-link></li>
-    <li><router-link class="link" to="/about">ABOUT US</router-link></li>     
+    <li><router-link class="link" to="/about">ABOUT</router-link></li>     
     <router-link to="/profile" class="profile-trigger" aria-label="Profile">
       <i class="fas fa-user-circle" style="font-size: 30px; cursor: pointer;"></i>
   </router-link>
@@ -142,14 +142,14 @@ ul,
 
 li {
   text-transform: uppercase;
-  padding: 16px;
-  margin-left: 30px;
+  padding: 14px;
+  margin-left: 15px;
 }
 
 .link {
-  font-size: 20px;
+  font-size: 16px;
   transition: .5s ease all;
-  padding-bottom: 4px;
+  padding-bottom: 1px;
   border-bottom: 2px solid transparent;
 
   &:hover {
@@ -275,6 +275,11 @@ body {
   right: -20px; /* Move right */
   bottom: 10px;
   text-decoration: none; /* Removes underline */
+
+&:hover {
+    color: black;
+    border-color: black;
+  }
 }
 
 .profile-trigger:hover {
