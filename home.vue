@@ -263,6 +263,36 @@ body {
   overflow: hidden; 
 }
 
+.profile-trigger {
+  font-size: 30px;
+  color: #f6f8d5; 
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin-left: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+  right: -20px; /* Move right */
+  bottom: 10px;
+  text-decoration: none; /* Removes underline */
+}
+
+.profile-trigger:hover {
+  transform: scale(1.1); 
+  
+}
+.profile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -308,32 +338,65 @@ body {
   text-align: justify;
 }
 
-.profile-trigger {
-  font-size: 30px;
-  color: #f6f8d5; 
-  transition: color 0.3s ease, transform 0.3s ease;
-  margin-left: 10px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  position: relative;
-  right: -20px; /* Move right */
-  bottom: 10px;
-  text-decoration: none; /* Removes underline */
+/* RESPONSIVE DESIGN */
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .logo {
+    margin-top: 150px;
+    width: 450px;
+    height: 450px;
+  }
+  .content {
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .content h2 {
+    font-size: 2em;
+    margin: 0;
+  }
+  .content p {
+    font-size: 1.2em;
+    margin: 0;
+  }
 }
 
-.profile-trigger:hover {
-  transform: scale(1.1); 
-  
+@media only screen and (max-width: 768px) {
+  .logo {
+    margin-top: 100px;
+    width: 450px;
+    height: 450px;
+  }
+  .content h2 {
+    font-size: 1.8em;
+  }
+  .content p {
+    font-size: 1em;
+  }
 }
-.profile-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+
+@media only screen and (max-width: 480px) {
+
+  .logo {
+    width: 200px;
+    height: 200px;
+  }
+  .content h2 {
+    font-size: 1.5em;
+  }
+  .content p {
+    font-size: 0.8em;
+  }
+
+  .dropdown-nav {
+    overflow-y: scroll;
+  }
 }
+
+</style>
