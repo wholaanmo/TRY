@@ -218,8 +218,7 @@
         width: 100%; /* Make it fill the container */
         max-width: 600px; /* Increase max size */
         height: auto;
-        margin-top: 110px; 
-
+        margin-top: 130px; 
         display: block;
     }
 
@@ -248,6 +247,7 @@
 
         .deco-image {
             max-width: 600px;
+            margin-top: 110px;
         }
     
         .penny {
@@ -277,6 +277,7 @@
 
         .deco-image {
             max-width: 600px;
+            margin-top: 110px;
         }
 
         .penny {
@@ -296,6 +297,7 @@
     
         .deco-image {
             max-width: 600px;
+            margin-top: 70px;
         }
     
         .penny {
