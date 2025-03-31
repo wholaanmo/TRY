@@ -74,7 +74,7 @@
         justify-content: space-between; 
         flex-direction: row;
         padding: 30px;
-        margin-right: 70px;
+        margin-right: 90px;
     }
     
     .login-form {
@@ -86,11 +86,11 @@
         text-align: center;
         align-items: center;
         margin-top: 25px;
-        margin-left: 30px;
+        margin-left: 20px;
     }
     
     .login-deco-container {
-        width: 45%;
+        width: 55%;
         height: 500px;
         background: rgba(0, 0, 0, 0.4);
         backdrop-filter: blur(10px);
@@ -215,10 +215,11 @@
     }
     
     .deco-image {
-        width: 380px;
+        width: 100%; /* Make it fill the container */
+        max-width: 600px; /* Increase max size */
         height: auto;
         margin-top: 110px; 
-        margin-left: 30px; 
+
         display: block;
     }
 
@@ -246,7 +247,7 @@
         }
 
         .deco-image {
-            width: -500px;
+            max-width: 600px;
         }
     
         .penny {
@@ -275,7 +276,7 @@
         }
 
         .deco-image {
-            width: -110px;
+            max-width: 600px;
         }
 
         .penny {
@@ -285,7 +286,7 @@
     
     @media (max-width: 480px) {
         .login-container {
-            width: 95%;
+            width: 90%;
             padding: 10px;
         }
     
@@ -294,7 +295,7 @@
         }
     
         .deco-image {
-            width: -110px;
+            max-width: 600px;
         }
     
         .penny {
@@ -302,23 +303,4 @@
         }
     }
 
-    @media (max-width: 400px) {
-        .login-container {
-            width: 98%;
-            padding: 5px;
-        }
-    
-        .login-label {
-            font-size: 1em;
-        }
-    
-        .deco-image {
-            width: -110px;
-        }
-    
-        .penny {
-            font-size: 3em;
-        }
-    }
-    
     </style>
