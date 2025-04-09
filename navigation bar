@@ -2,7 +2,7 @@
     <header :class="{ 'scrolled-nav': scrolledNav}">
     <nav>
       <div class="branding">
-        <p class="title">Money Log</p>
+        <img src="/LOGO.png" alt="Money Log Logo"/>
       </div>
     <ul v-show="!mobile" class="navigation">
       <li><router-link class="link" to="/home">HOME</router-link></li>
@@ -97,7 +97,7 @@ nav {
   position: relative;
   display: flex;
   flex-direction: row;
-  padding: 6px 0;
+  padding: 8px 0;
   transition: .5s ease all;
   width: 90%;
   margin: 0 auto;
@@ -143,15 +143,14 @@ li {
 
 .branding {
   display: flex;
-}
+  align-items: center;
 
-  p.title {
-  color: #f6f8d5;
-  margin-left: -10px;
-  font-size: 40px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  img {
+    width: 128px;
+    transition: .5s ease all;
+    margin-left: -10px;
+  }
 }
-
 
 .navigation {
   display: flex;
@@ -225,10 +224,10 @@ li {
   box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba (0, 0, 0, 0.6);
 
   nav {
-    padding: 8px 0;
+    padding: 18px 0;
 
     .branding {
-      p.title {
+      img {
         width: 40px;
         box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba (0, 0, 0, 0.6);
       
